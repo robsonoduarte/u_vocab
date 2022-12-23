@@ -8,6 +8,7 @@ on:
 
 jobs:
   android:
+    name: 'Build Android'
     runs-on: ubuntu-latest
     steps:
   - uses: actions/checkout@v3
@@ -25,6 +26,7 @@ jobs:
     - run: flutter analyze
 
   ios:
+    name: 'Build IOS'
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
