@@ -1,2 +1,2 @@
 # you_vocab
-The app that you improve your english vocabulary 
+The app that help you to improve your english vocabulary 
