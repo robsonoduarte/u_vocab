@@ -1,6 +1,6 @@
 {
-    "name": "you_vocab",
-    "short_name": "you_vocab",
+    "name": "u_vocab",
+    "short_name": "u_vocab",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
