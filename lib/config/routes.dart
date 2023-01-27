@@ -12,10 +12,6 @@ final router = GoRouter(
           path: 'words',
           builder: (context, state) => const Words(),
         ),
-        GoRoute(
-          path: 'words/add',
-          builder: (context, state) => const WordsAdd(),
-        ),
       ],
     ),
   ],
