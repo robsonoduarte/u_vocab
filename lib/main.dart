@@ -12,9 +12,8 @@ class UVocab extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: router,
       title: 'uVocab',
-      theme: ThemeData(
-        primarySwatch: Colors.grey,
-      ),
+      darkTheme: ThemeData.dark(),
+      theme: ThemeData.light(),
     );
   }
 }
