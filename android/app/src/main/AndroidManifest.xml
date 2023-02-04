@@ -2,7 +2,7 @@
     package="com.uvocab.u_vocab">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-   <application
+    <application
         android:label="uVocab"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

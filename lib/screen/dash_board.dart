@@ -34,6 +34,7 @@ class _DashBoardState extends State<DashBoard> {
                     launchUrl(
                       Uri.parse(
                           'https://www.google.com/search?q=define+${_worlds.shuffle()}'),
+                      mode: LaunchMode.externalApplication,
                     );
                   },
                   child: Row(
