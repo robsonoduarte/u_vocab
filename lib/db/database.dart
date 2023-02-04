@@ -55,6 +55,7 @@ class DataBase {
     'quiet',
     'launch',
     'frame',
+    'comprise',
   ];
 
   Set<String> get words => {..._words}.toSet();
