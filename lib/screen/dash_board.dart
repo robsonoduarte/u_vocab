@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:u_vocab/service/worlds.dart';
+import 'package:u_vocab/service/words.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DashBoard extends StatefulWidget {
@@ -9,7 +9,7 @@ class DashBoard extends StatefulWidget {
 }
 
 class _DashBoardState extends State<DashBoard> {
-  final _worlds = Worlds();
+  final _words = Words();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _DashBoardState extends State<DashBoard> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Total Worlds : ${_worlds.total}',
+              'Total Words : ${_words.total}',
               style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -33,7 +33,7 @@ class _DashBoardState extends State<DashBoard> {
                   onPressed: () async {
                     launchUrl(
                       Uri.parse(
-                          'https://www.google.com/search?q=define+${_worlds.shuffle()}'),
+                          'https://www.google.com/search?q=define+${_words.shuffle()}'),
                       mode: LaunchMode.externalApplication,
                     );
                   },

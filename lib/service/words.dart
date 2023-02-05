@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:u_vocab/db/database.dart';
 
-class Worlds {
+class Words {
   final _database = DataBase();
   String shuffle() {
     var words = _database.words;
