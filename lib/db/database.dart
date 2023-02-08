@@ -63,6 +63,7 @@ class DataBase {
     'nutrition',
     'adulesent',
     'cotton',
+    'daily',
   ];
 
   Set<String> get words => {..._words}.toSet();
