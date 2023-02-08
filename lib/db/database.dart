@@ -60,6 +60,9 @@ class DataBase {
     'gyroscope',
     'sensor',
     'award',
+    'nutrition',
+    'adulesent',
+    'cotton',
   ];
 
   Set<String> get words => {..._words}.toSet();
