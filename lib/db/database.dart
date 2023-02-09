@@ -70,6 +70,7 @@ class DataBase {
     'device',
     'permission',
     'muscule',
+    'useful',
   ];
 
   Set<String> get words => {..._words}.toSet();
