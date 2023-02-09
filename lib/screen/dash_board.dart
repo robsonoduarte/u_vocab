@@ -33,7 +33,8 @@ class _DashBoardState extends State<DashBoard> {
                   onPressed: () async {
                     launchUrl(
                       Uri.parse(
-                          'https://www.google.com/search?q=define+${_words.shuffle()}'),
+                        'https://www.google.com/search?q=define+${_words.shuffle()}',
+                      ),
                       mode: LaunchMode.externalApplication,
                     );
                   },
@@ -52,14 +53,28 @@ class _DashBoardState extends State<DashBoard> {
           ],
         ),
       ),
-/*      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton(
         onPressed: () {
-          context.go("/words");
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: const Text('New Word'),
+              content: const Text('add input..'),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text('Save'),
+                ),
+              ],
+            ),
+          );
         },
         child: const Icon(
           Icons.add,
         ),
-      ),*/
+      ),
     );
   }
 }
