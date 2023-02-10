@@ -78,6 +78,13 @@ class DataBase {
     'forward',
     'power',
     'fusion',
+    'thermal',
+    'terminal',
+    'database',
+    'deep',
+    'blue',
+    'flexibility',
+    'action',
   ];
 
   Set<String> get words => {..._words}.toSet();
