@@ -85,6 +85,8 @@ class DataBase {
     'blue',
     'flexibility',
     'action',
+    'sunset',
+    'sunrise',
   ];
 
   Set<String> get words => {..._words}.toSet();
