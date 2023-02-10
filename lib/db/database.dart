@@ -75,7 +75,9 @@ class DataBase {
     'alert',
     'system',
     'legacy',
-    'forware',
+    'forward',
+    'power',
+    'fusion',
   ];
 
   Set<String> get words => {..._words}.toSet();
