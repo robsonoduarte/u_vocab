@@ -88,6 +88,18 @@ class DataBase {
     'sunset',
     'sunrise',
     'section',
+    'curse',
+    'summary',
+    'flexible',
+    'navigation',
+    'build',
+    'concept'
+    'official',
+    'between'
+    'door',
+    'doer',
+    'cage',
+    'hesitate',
   ];
 
   Set<String> get words => {..._words}.toSet();
