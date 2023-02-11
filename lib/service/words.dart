@@ -7,7 +7,7 @@ class Words {
   String shuffle() {
     var words = _database.words;
     var index = Random().nextInt(words.length - 1);
-    return words.elementAt(index);
+    return words.elementAt(index).value;
   }
 
   save(String word) {
