@@ -9,6 +9,8 @@ class DashBoard extends StatefulWidget {
 }
 
 class _DashBoardState extends State<DashBoard> {
+  String _word = '';
+
   final _words = Words();
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,8 @@ class _DashBoardState extends State<DashBoard> {
                   onPressed: () async {
                     launchUrl(
                       Uri.parse(
-                          'https://www.google.com/search?q=define+${_words.shuffle()}'),
+                        'https://www.google.com/search?q=define+${_words.shuffle()}',
+                      ),
                       mode: LaunchMode.externalApplication,
                     );
                   },
@@ -52,14 +55,49 @@ class _DashBoardState extends State<DashBoard> {
           ],
         ),
       ),
-/*      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton(
         onPressed: () {
-          context.go("/words");
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: const Text('New Word'),
+              content: TextField(
+                decoration: const InputDecoration(
+                  hintText: 'add new word',
+                ),
+                onChanged: (value) {
+                  setState(() {
+                    _word = value;
+                  });
+                },
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text('Save'),
+                ),
+                TextButton(
+                  onPressed: () async {
+                    launchUrl(
+                      Uri.parse(
+                        'https://www.google.com/search?q=define+$_word',
+                      ),
+                      mode: LaunchMode.externalApplication,
+                    );
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text('Save/Google'),
+                ),
+              ],
+            ),
+          );
         },
         child: const Icon(
           Icons.add,
         ),
-      ),*/
+      ),
     );
   }
 }
