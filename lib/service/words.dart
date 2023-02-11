@@ -10,5 +10,9 @@ class Words {
     return words.elementAt(index);
   }
 
+  save(String word) {
+    _database.save(word);
+  }
+
   int get total => _database.words.length;
 }

@@ -93,14 +93,18 @@ class DataBase {
     'flexible',
     'navigation',
     'build',
-    'concept'
+    'concept',
     'official',
-    'between'
+    'between',
     'door',
     'doer',
     'cage',
     'hesitate',
   ];
+
+  save(String word) {
+    _words.add(word);
+  }
 
   Set<String> get words => {..._words}.toSet();
 }
