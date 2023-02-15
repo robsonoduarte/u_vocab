@@ -102,6 +102,13 @@ class DataBase {
     Word('doer', DateTime.now()),
     Word('cage', DateTime.now()),
     Word('hesitate', DateTime.now()),
+    Word('hammer', DateTime.now()),
+    Word('gorgeous', DateTime.now()),
+    Word('focus', DateTime.now()),
+    Word('description', DateTime.now()),
+    Word('month', DateTime.now()),
+    Word('expire', DateTime.now()),
+    Word('regard', DateTime.now()),
   ];
 
   save(String word) {
