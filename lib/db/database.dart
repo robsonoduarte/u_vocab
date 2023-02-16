@@ -109,6 +109,8 @@ class DataBase {
     Word('month', DateTime.now()),
     Word('expire', DateTime.now()),
     Word('regard', DateTime.now()),
+    Word('painter', DateTime.now()),
+    Word('fruition', DateTime.now()),
   ];
 
   save(String word) {
