@@ -116,6 +116,7 @@ class DataBase {
     Word('instance', DateTime.now()),
     Word('introduction', DateTime.now()),
     Word('required', DateTime.now()),
+    Word('residential', DateTime.now()),
   ];
 
   save(String word) {
