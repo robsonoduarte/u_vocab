@@ -115,6 +115,7 @@ class DataBase {
     Word('destroy', DateTime.now()),
     Word('instance', DateTime.now()),
     Word('introduction', DateTime.now()),
+    Word('required', DateTime.now()),
   ];
 
   save(String word) {
