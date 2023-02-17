@@ -111,6 +111,10 @@ class DataBase {
     Word('regard', DateTime.now()),
     Word('painter', DateTime.now()),
     Word('fruition', DateTime.now()),
+    Word('cycle', DateTime.now()),
+    Word('destroy', DateTime.now()),
+    Word('instance', DateTime.now()),
+    Word('introduction', DateTime.now()),
   ];
 
   save(String word) {
