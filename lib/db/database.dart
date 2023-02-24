@@ -120,6 +120,7 @@ class DataBase {
     Word('feed', DateTime.now()),
     Word('believer', DateTime.now()),
     Word('filter', DateTime.now()),
+    Word('vanish', DateTime.now()),
   ];
 
   save(String word) {
