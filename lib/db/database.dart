@@ -129,6 +129,8 @@ class DataBase {
     Word('symmetric', DateTime.now()),
     Word('understand', DateTime.now()),
     Word('brazilian', DateTime.now()),
+    Word('environment', DateTime.now()),
+    Word('saturday', DateTime.now()),
   ];
 
   save(String word) {
