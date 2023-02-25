@@ -117,6 +117,20 @@ class DataBase {
     Word('introduction', DateTime.now()),
     Word('required', DateTime.now()),
     Word('residential', DateTime.now()),
+    Word('feed', DateTime.now()),
+    Word('believer', DateTime.now()),
+    Word('filter', DateTime.now()),
+    Word('vanish', DateTime.now()),
+    Word('algorithm', DateTime.now()),
+    Word('secret', DateTime.now()),
+    Word('key', DateTime.now()),
+    Word('spec', DateTime.now()),
+    Word('asymmetric', DateTime.now()),
+    Word('symmetric', DateTime.now()),
+    Word('understand', DateTime.now()),
+    Word('brazilian', DateTime.now()),
+    Word('environment', DateTime.now()),
+    Word('saturday', DateTime.now()),
   ];
 
   save(String word) {
