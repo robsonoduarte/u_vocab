@@ -121,6 +121,14 @@ class DataBase {
     Word('believer', DateTime.now()),
     Word('filter', DateTime.now()),
     Word('vanish', DateTime.now()),
+    Word('algorithm', DateTime.now()),
+    Word('secret', DateTime.now()),
+    Word('key', DateTime.now()),
+    Word('spec', DateTime.now()),
+    Word('asymmetric', DateTime.now()),
+    Word('symmetric', DateTime.now()),
+    Word('understand', DateTime.now()),
+    Word('brazilian', DateTime.now()),
   ];
 
   save(String word) {
