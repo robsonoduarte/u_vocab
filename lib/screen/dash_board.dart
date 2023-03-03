@@ -62,6 +62,7 @@ class _DashBoardState extends State<DashBoard> {
             builder: (context) => AlertDialog(
               title: const Text('New Word'),
               content: TextField(
+                keyboardType: TextInputType.text,
                 decoration: const InputDecoration(
                   hintText: 'add new word',
                 ),
