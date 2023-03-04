@@ -6,6 +6,7 @@ import 'package:u_vocab/db/database_sqflite.dart';
 GetIt getIt = GetIt.instance;
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   GetIt.I.registerSingleton<DBSQFlite>(DBSQFlite());
   runApp(const UVocab());
 }
