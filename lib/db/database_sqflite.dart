@@ -1,8 +1,30 @@
+import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
 import 'package:u_vocab/repository/word_repository.dart';
 
 import '../model/word.dart';
 
 class DBSQFlite extends WordRepository {
+  Database? _database;
+
+  DBSQFlite() {
+    _init();
+  }
+
+  _init() async {
+    _database = await openDatabase(
+      join(await getDatabasesPath(), 'u_vocab.db'),
+      version: 1,
+      onCreate: _onCreate,
+    );
+  }
+
+  _onCreate(Database db, int version) {
+    db.execute(
+      'CREATE TABLE WORDS (ID INTEGER PRIMARY KEY, VALUE TEXT, CREATED_AT INTEGER, UPDATED_AT INTEGER, REVIEWED_AT INTEGER)',
+    );
+  }
+
   final _words = [
     Word('jaw', DateTime.now()),
     Word('generate', DateTime.now()),
@@ -148,7 +170,9 @@ class DBSQFlite extends WordRepository {
 
   @override
   save(String word) {
-    _words.add(Word(word, DateTime.now()));
+    if (_database!.isOpen) {
+      _words.add(Word(word, DateTime.now()));
+    }
   }
 
   @override
