@@ -9,8 +9,8 @@ GetIt getIt = GetIt.instance;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   GetIt.I.registerSingleton<DBSQFlite>(DBSQFlite());
-  await GetIt.I.get<DBSQFlite>().start();
   GetIt.I.registerSingleton<Words>(Words());
+  await GetIt.I.get<DBSQFlite>().start();
   runApp(const UVocab());
 }
 

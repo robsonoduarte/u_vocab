@@ -42,7 +42,7 @@ class DBSQFlite extends WordRepository {
   @override
   Future<Set<Word>> list() async {
     var data = await _database!.rawQuery('SELECT * FROM WORDS');
-    var set = data
+    return data
         .map(
           (e) => Word(
             e['VALUE'] as String,
@@ -51,6 +51,5 @@ class DBSQFlite extends WordRepository {
           ),
         )
         .toSet();
-    return set;
   }
 }
