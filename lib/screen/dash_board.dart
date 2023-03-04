@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:u_vocab/model/word.dart';
 import 'package:u_vocab/service/words.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -11,8 +12,7 @@ class DashBoard extends StatefulWidget {
 
 class _DashBoardState extends State<DashBoard> {
   String _word = '';
-
-  final _words = Words();
+  final _words = GetIt.I.get<Words>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
