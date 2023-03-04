@@ -135,6 +135,13 @@ class DataBase {
     Word('darling', DateTime.now()),
     Word('iron', DateTime.now()),
     Word('saddle', DateTime.now()),
+    Word('technique', DateTime.now()),
+    Word('deprecate', DateTime.now()),
+    Word('peppermint', DateTime.now()),
+    Word('damp', DateTime.now()),
+    Word('some', DateTime.now()),
+    Word('statement', DateTime.now()),
+    Word('soak', DateTime.now()),
   ];
 
   save(String word) {
