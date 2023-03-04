@@ -170,7 +170,9 @@ class DBSQFlite extends WordRepository {
 
   @override
   save(String word) {
-    _words.add(Word(word, DateTime.now()));
+    if (_database!.isOpen) {
+      _words.add(Word(word, DateTime.now()));
+    }
   }
 
   @override
