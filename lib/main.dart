@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:u_vocab/config/routes.dart';
+import 'package:u_vocab/db/database_sqflite.dart';
+
+GetIt getIt = GetIt.instance;
 
 void main() {
+  GetIt.I.registerSingleton<DBSQFlite>(DBSQFlite());
   runApp(const UVocab());
 }
 

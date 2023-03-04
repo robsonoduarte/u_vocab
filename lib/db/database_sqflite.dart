@@ -1,6 +1,8 @@
+import 'package:u_vocab/repository/word_repository.dart';
+
 import '../model/word.dart';
 
-class DataBase {
+class DBSQFlite extends WordRepository {
   final _words = [
     Word('jaw', DateTime.now()),
     Word('generate', DateTime.now()),
@@ -144,9 +146,11 @@ class DataBase {
     Word('soak', DateTime.now()),
   ];
 
+  @override
   save(String word) {
     _words.add(Word(word, DateTime.now()));
   }
 
-  Set<Word> get words => {..._words}.toSet();
+  @override
+  Set<Word> list() => {..._words}.toSet();
 }

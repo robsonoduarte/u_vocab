@@ -1,11 +1,11 @@
 import 'dart:math';
 
-import 'package:u_vocab/db/database.dart';
+import 'package:u_vocab/repository/word_repository.dart';
 
 class Words {
-  final _database = DataBase();
+  final _database = WordRepository.instance;
   String shuffle() {
-    var words = _database.words;
+    var words = _database.list();
     var index = Random().nextInt(words.length - 1);
     return words.elementAt(index).value;
   }
@@ -14,5 +14,5 @@ class Words {
     _database.save(word);
   }
 
-  int get total => _database.words.length;
+  int get total => _database.list().length;
 }
