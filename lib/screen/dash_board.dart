@@ -85,6 +85,7 @@ class _DashBoardState extends State<DashBoard> {
               actions: [
                 TextButton(
                   onPressed: () {
+                    _words.save(_word);
                     Navigator.of(context).pop();
                   },
                   child: const Text('Save'),
