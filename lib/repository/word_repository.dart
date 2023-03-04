@@ -7,5 +7,5 @@ abstract class WordRepository {
   static final WordRepository _instance = GetIt.I.get<DBSQFlite>();
   static WordRepository get instance => _instance;
   void save(String word);
-  Set<Word> list();
+  Future<Set<Word>> list();
 }
