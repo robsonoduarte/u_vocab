@@ -131,6 +131,17 @@ class DataBase {
     Word('brazilian', DateTime.now()),
     Word('environment', DateTime.now()),
     Word('saturday', DateTime.now()),
+    Word('banking', DateTime.now()),
+    Word('darling', DateTime.now()),
+    Word('iron', DateTime.now()),
+    Word('saddle', DateTime.now()),
+    Word('technique', DateTime.now()),
+    Word('deprecate', DateTime.now()),
+    Word('peppermint', DateTime.now()),
+    Word('damp', DateTime.now()),
+    Word('some', DateTime.now()),
+    Word('statement', DateTime.now()),
+    Word('soak', DateTime.now()),
   ];
 
   save(String word) {
