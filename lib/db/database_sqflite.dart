@@ -7,10 +7,6 @@ import '../model/word.dart';
 class DBSQFlite extends WordRepository {
   Database? _database;
 
-  DBSQFlite() {
-    _init();
-  }
-
   _init() async {
     _database = await openDatabase(
       join(await getDatabasesPath(), 'u_vocab.db'),
@@ -26,7 +22,12 @@ class DBSQFlite extends WordRepository {
   }
 
   @override
-  save(String word) {
+  Future<void> start() async {
+    await _init();
+  }
+
+  @override
+  Future<void> save(String word) async {
     _database!.insert(
       'WORDS',
       {

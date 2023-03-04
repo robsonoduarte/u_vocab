@@ -6,10 +6,11 @@ import 'package:u_vocab/service/words.dart';
 
 GetIt getIt = GetIt.instance;
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   GetIt.I.registerSingleton<DBSQFlite>(DBSQFlite());
   GetIt.I.registerSingleton<Words>(Words());
+  await GetIt.I.get<DBSQFlite>().start();
   runApp(const UVocab());
 }
 
