@@ -91,6 +91,7 @@ class _DashBoardState extends State<DashBoard> {
                 ),
                 TextButton(
                   onPressed: () async {
+                    _words.save(_word);
                     launchUrl(
                       Uri.parse(
                         'https://www.google.com/search?q=define+$_word',
