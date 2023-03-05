@@ -5,7 +5,6 @@ import '../model/word.dart';
 
 abstract class WordRepository {
   static WordRepository get instance => GetIt.I.get<DBSQFlite>();
-  Future<void> start();
   Future<void> save(String word);
   Future<Set<Word>> list();
 }

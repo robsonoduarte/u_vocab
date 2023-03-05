@@ -8,8 +8,8 @@ class DBSQFlite extends WordRepository {
   Database? _database;
 
   _init() async {
-    var databasePath = await getDatabasesPath();
-    var path = join(databasePath, 'u_vocab.db');
+    var dbPath = await getDatabasesPath();
+    var path = join(dbPath, 'u_vocab.db');
     _database = await openDatabase(
       path,
       version: 1,
@@ -23,9 +23,12 @@ class DBSQFlite extends WordRepository {
     );
   }
 
-  @override
-  Future<void> start() async {
+  Future<void> init() async {
     await _init();
+  }
+
+  DateTime _toDateTime(int value) {
+    return DateTime.fromMillisecondsSinceEpoch(value * 1000);
   }
 
   @override
@@ -44,10 +47,9 @@ class DBSQFlite extends WordRepository {
     var data = await _database!.rawQuery('SELECT * FROM WORDS');
     return data
         .map(
-          (e) => Word(
-            e['VALUE'] as String,
-            DateTime.fromMillisecondsSinceEpoch(
-                (e['CREATED_AT'] as int) * 1000),
+          (word) => Word(
+            word['VALUE'] as String,
+            _toDateTime(word['CREATED_AT'] as int),
           ),
         )
         .toSet();
