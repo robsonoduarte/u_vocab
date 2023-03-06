@@ -4,8 +4,7 @@ import 'package:u_vocab/db/database_sqflite.dart';
 import '../model/word.dart';
 
 abstract class WordRepository {
-  static final WordRepository _instance = GetIt.I.get<DBSQFlite>();
-  static WordRepository get instance => _instance;
-  void save(String word);
-  Set<Word> list();
+  static WordRepository get instance => GetIt.I.get<DBSQFlite>();
+  Future<void> save(String word);
+  Future<Set<Word>> list();
 }
