@@ -1,4 +1,4 @@
-name: YouVocab GH Actions
+name: UVocab App GH Actions
 
 on:
   push:
