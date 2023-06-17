@@ -46,8 +46,8 @@ class _DashBoardState extends State<DashBoard> {
                             mode: LaunchMode.externalApplication,
                           );
                         },
-                        child: Row(
-                          children: const [
+                        child: const Row(
+                          children: [
                             Icon(
                               Icons.shuffle,
                             ),
